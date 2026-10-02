@@ -1,0 +1,21 @@
+{
+  "name": "leitor-pdf",
+  "version": "1.0.0",
+  "description": "Leitor de PDF Desktop",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.seuusuario.leitorpdf",
+    "productName": "LeitorPDF",
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.0"
+  }
+}

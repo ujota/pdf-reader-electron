@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leitor de PDF</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Carregando a biblioteca PDF.js via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+
+  <header class="toolbar">
+    <input type="file" id="file-input" accept="application/pdf" />
+    
+    <div class="controls">
+      <button id="prev-page">Anterior</button>
+      <span>Página: <span id="page-num">0</span> / <span id="page-count">0</span></span>
+      <button id="next-page">Próxima</button>
+    </div>
+
+    <div class="zoom-controls">
+      <button id="zoom-out">-</button>
+      <span>Zoom: <span id="zoom-val">100%</span></span>
+      <button id="zoom-in">+</button>
+    </div>
+  </header>
+
+  <main class="pdf-container">
+    <canvas id="pdf-render"></canvas>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
